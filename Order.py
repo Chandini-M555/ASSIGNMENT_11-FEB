@@ -6,6 +6,7 @@ logging.basicConfig(
 )
 
 class Order:
+    Order_platform="Amazon"
     tax_percent=5
     def __init__(self,orderid,cname):
         self.orderid=orderid
