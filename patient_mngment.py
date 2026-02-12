@@ -1,6 +1,7 @@
 class Patient:
     hospital_name = "Apollo"
     consultation_fee = 500
+    room_charge=2000
 
     def __init__(self,name,age,disease,admitted_days):
         self.name = name
@@ -24,8 +25,7 @@ class Patient:
 
     def bill(self):
         if self.is_admitted:
-            room_charge = 2000
-            total_bill = (room_charge * self.admitted_days) + Patient.consultation_fee
+            total_bill = (Patient.room_charge * self.admitted_days) + Patient.consultation_fee
             print("Total Bill:", total_bill)
         else:
             print(" No bill")
